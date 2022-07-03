@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Flex Shrink</title>
+<Style>
+    .flex-container{
+        display: flex;
+        border:  2px solid black;
+        max-width: 350px;
+        margin-bottom: 10px;
+    }
+
+    .item{
+        background-color: orangered;
+        font-size: 24px;
+        text-align: center;
+        margin: 5px;
+    }
+
+    .shrink_0{
+        flex-shrink: 0;
+        flex-basis: 100px;
+    }
+
+    .shrink_1{
+        flex-shrink: 1;
+    }
+
+    .shrink_2{
+        flex-shrink: 2;
+        flex-basis: 100px;
+    }
+
+    .shrink_3{
+        flex-shrink: 3;
+        flex-basis: 100px;
+
+    }
+    .flex_grow_1{
+        flex-grow: 1;
+    }
+</Style>
+</head>
+<body>
+    <p>Flex-Shrink: 1</p>
+    <div class="flex-container">
+        <div class="item shrink_1 flex_grow_1">A</div>
+        <div class="item shrink_1 flex_grow_1">B</div>
+        <div class="item shrink_1 flex_grow_1">C</div>
+        <div class="item shrink_1 flex_grow_1">D</div>
+        <div class="item shrink_1 flex_grow_1">E</div>
+    </div>
+
+    <div class="flex-container">
+        <div class="item shrink_1 flex_grow_1">A</div>
+        <div class="item shrink_1 flex_grow_1">B - Conteudo teste para..</div>
+        <div class="item shrink_1 flex_grow_1">C</div>
+        <div class="item shrink_1 flex_grow_1">D</div>
+    </div>
+
+    <p>Flex-Shrink: mix / Basis 100px</p>
+    <div class="flex-container">
+        <div class="item shrink_1 flex_grow_1">A</div>
+        <div class="item shrink_2 flex_grow_1">B - Conteudo teste par</div>
+        <div class="item shrink_2 flex_grow_1">C</div>
+        <div class="item shrink_3 flex_grow_1">D</div>
+    </div>
+</body>
+</html>

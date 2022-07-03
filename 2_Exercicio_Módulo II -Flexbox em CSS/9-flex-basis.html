@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Flex Basis</title>
+
+    <Style>
+        .flex-container{
+            max-width: 500px;
+            border: 2px solid black;
+            display: flex;
+        }
+
+        .items{
+            background-color: coral;
+            color: white;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .b_auto{
+            flex-basis: auto;
+        }
+
+        .b_Zero{
+            flex-basis: 0;
+        }
+
+        .flexGrow-0{
+            flex-grow: 0;
+        }
+
+        .flexGrow-1{
+            flex-grow: 1;
+        }
+
+        .flexGrow-2{
+            flex-grow: 2;
+        }
+
+        .Width_100{
+            flex-basis: 100px;
+        }
+    </Style>
+</head>
+<body>
+    <p>Basis Auto</p>
+    <div class="flex-container">
+        <div class="items b_auto flexGrow-1">A</div>
+        <div class="items b_auto flexGrow-1">BBB</div>
+        <div class="items b_auto flexGrow-1">C</div>
+        <div class="items b_auto flexGrow-2">DEF</div>
+    </div>
+
+    <p>Basis 0[Zero]</p>
+    <div class="flex-container">
+        <div class="items b_Zero flexGrow-1">Aaaaaaaaa</div>
+        <div class="items b_Zero flexGrow-1">BBB</div>
+        <div class="items b_Zero flexGrow-1">C</div>
+        <div class="items b_Zero flexGrow-1">DEF</div>
+    </div>
+
+    <p>Basis + Width</p>
+    <div class="flex-container">
+        <div class="items Width_100 flexGrow-2">Aa</div>
+        <div class="items Width_100 flexGrow-2">BBB</div>
+        <div class="items Width_100 flexGrow-2">C</div>
+        <div class="items Width_100 flexGrow-2">DEF</div>
+    </div>
+</body>
+</html>
